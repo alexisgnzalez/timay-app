@@ -17,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CardsComponent } from './cards/cards.component';
+import { SkillsCardComponent } from './skills-card/skills-card.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardsComponent } from './cards/cards.component';
     NavComponent,
     MainPageComponent,
     PageNotFoundComponent,
-    CardsComponent
+    CardsComponent,
+    SkillsCardComponent
   ],
   imports: [
     BrowserModule,
