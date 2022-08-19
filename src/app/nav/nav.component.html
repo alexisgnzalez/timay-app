@@ -4,8 +4,8 @@
       opened="false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item routerLink="/main-page">Main Page</a>
+      <a mat-list-item routerLink="/cards-page">Cards Page</a>
       <a mat-list-item href="#">Link 3</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -22,7 +22,6 @@
       </button>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <iframe width="50%" height="1012" frameborder="0"
-  src="https://observablehq.com/embed/@d3/radial-area-chart?cells=chart"></iframe>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
