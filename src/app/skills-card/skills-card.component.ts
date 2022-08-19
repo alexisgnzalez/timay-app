@@ -12,4 +12,8 @@ export class SkillsCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  resizeIframe(obj: any) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+
 }
