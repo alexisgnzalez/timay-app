@@ -1,10 +1,29 @@
 .profile-card {
-	width: 230px,
-	height: 100pm
+	width: 230px;
+	height: 100pm;
 
 	.avatar {
-		width: 30px;
-		height: 30px;
-		border-radius: 50%;
+	  height: 40px;
+	  width: 40px;
+	  border-radius: 50%;
+	  border-color: white;
+	  border-width: 5px;
+	  border-style: solid;
 	}
+
+
+	h1 {
+	  font-size: 35px;
+	  color: rgb(36, 36, 36);
+	}
+
+	h2 {
+	  color:rgb(0, 119, 119);
+	  font-weight: bold;
+	}
+
+	p {
+	  margin: 10px 30px;
+	}
+
 }
