@@ -1,0 +1,35 @@
+.layout-container {
+	margin: 3% 15%;
+
+	.wrapper-cards {
+		display: flex;
+		flex-wrap: wrap;
+
+		.profile-card {
+			display: flex;
+			background: white;
+			border-radius: 12px;
+			width: 100%;
+
+			.rounded {
+				background: red;
+			    border-radius: 50%;
+			    width: 120px;
+			    height: 120px;
+			}
+
+			.wrapper-info {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 100%;
+			}
+
+			.info {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+	}
+
+}
