@@ -19,6 +19,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { CardsComponent } from './cards/cards.component';
 import { SkillsCardComponent } from './skills-card/skills-card.component';
 import { SkillsChartComponent } from './skills-chart/skills-chart.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SkillsChartComponent } from './skills-chart/skills-chart.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
