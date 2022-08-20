@@ -116,7 +116,6 @@ export class SkillsChartComponent implements OnInit {
         .append("g")
         .attr("class", "axis");
 
-
     axis.append("line")
       .attr("x1", 0)
       .attr("y1", 0)
@@ -145,15 +144,31 @@ export class SkillsChartComponent implements OnInit {
       .data(this.data)
       .join('g')
         .attr("data-name", (d: any, i: any) => this.device(i))
-        .attr("fill", "none")
+        .attr("fill", "steelblue")
+        .attr("fill-opacity", 0.3)
         .attr("stroke", "steelblue");
 
     plots.append('path')
       .attr("d", (d: any) => this.radarLine(d.map((v: any) => v.value)))
       .attr("fill", (d: any, i: any) => this.color(i))
-      .attr("fill-opacity", 0.1)
+      .attr("fill-opacity", 0.3)
       .attr("stroke", (d: any, i: any) => this.color(i))
-      .attr("stroke-width", 2);
+      .attr("stroke-width", 2)
+      .attr('class', 'radarArea2')
+      .on('mouseover', function(d: any) {
+        //Dim all blobs
+        d3.selectAll('.radarArea2')
+          .transition()
+          .duration(350)
+          .style('fill-opacity', 0.7)
+      })
+      .on('mouseout', () => {
+        //Bring back all blobs
+        d3.selectAll('.radarArea2')
+          .transition()
+          .duration(350)
+          .style('fill-opacity', 0.3)
+      });
 
     plots.selectAll("circle")
       .data((d: any) => d)
@@ -165,13 +180,9 @@ export class SkillsChartComponent implements OnInit {
           this.rScale(d.value) * Math.sin(this.angleSlice*i - Math.PI/2))
         .style("fill-opacity", 0.8);
 
-    /*const blobCircleWrapper = container.append('g')
-      .selectAll('.radarCircleWrapper')
-      .data(this.data)
-      .join('g')
-        .attr('class', 'radarCircleWrapper')
+    
 
-    blobCircleWrapper.selectAll('.radarInvisibleCircle')
+    plots.selectAll('.radarInvisibleCircle')
       .data((d: any) => d)
       .join('circle')
         .attr('class', 'radarInvisibleCircle')
@@ -202,7 +213,7 @@ export class SkillsChartComponent implements OnInit {
     
     const tooltip = container.append('text')
       .attr('class', 'tooltip')
-      .style('opacity', 0)*/
+      .style('opacity', 0)
     }
 
 }
