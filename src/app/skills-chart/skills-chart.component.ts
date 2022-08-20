@@ -13,11 +13,11 @@ export class SkillsChartComponent implements OnInit {
     [
       //Grecia
       { axis: "Liderazgo", value: 0.2 },
-      { axis: "Arquitectura de Software", value: 0.2 },
-      { axis: "Ciencia de datos", value: 0.2 },
-      { axis: "Diseño e Interfaz", value: 0.1 },
-      { axis: "Desarrollo Front-end", value: 0.8 },
-      { axis: "Desarrollo Backend", value: 0.5 }
+      { axis: "Arq. Software", value: 0.2 },
+      { axis: "Ciencia de Datos", value: 0.2 },
+      { axis: "UI/UX", value: 0.1 },
+      { axis: "Frontend", value: 0.8 },
+      { axis: "Backend", value: 0.5 }
     ]
   ];
   curveTypes = [
