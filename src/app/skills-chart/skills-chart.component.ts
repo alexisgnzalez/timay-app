@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import * as d3 from 'd3';
 import * as _ from 'underscore';
 
@@ -58,7 +58,7 @@ export class SkillsChartComponent implements OnInit {
     .domain([0, this.maxValue])
     .range([0, this.radius]);
   radarLine = d3.lineRadial()
-    .curve(d3["curveCardinalClosed"])
+    .curve(d3["curveLinearClosed"])
     .radius((d: any) => this.rScale(d))
     .angle((d: any, i) => i * this.angleSlice);
   color = d3.scaleOrdinal()
@@ -106,7 +106,7 @@ export class SkillsChartComponent implements OnInit {
         .attr('y', (d: any) => (-d * this.radius) / this.axisCircles)
         .attr('dy', '0.4em')
         .style('font-size', '8px')
-        .style('fill', '#737373')
+        .style('fill', '#585858')
         .text((d: any) =>
           this.formatPercent(this.maxValue * d / this.axisCircles));
 
@@ -130,6 +130,7 @@ export class SkillsChartComponent implements OnInit {
     axis.append("text")
       .attr("class", "legend")
       .style("font-size", "11px")
+      .style('fill', '#585858')
       .attr("text-anchor", "middle")
       .attr("font-family", "Roboto")
       .attr("dy", "0.35em")
@@ -180,40 +181,6 @@ export class SkillsChartComponent implements OnInit {
           this.rScale(d.value) * Math.sin(this.angleSlice*i - Math.PI/2))
         .style("fill-opacity", 0.8);
 
-    
-
-    plots.selectAll('.radarInvisibleCircle')
-      .data((d: any) => d)
-      .join('circle')
-        .attr('class', 'radarInvisibleCircle')
-        .attr('r', this.dotRadius * 1.5)
-        .attr('cx', (d: any,i: any) =>
-          this.rScale(d.value) * Math.cos(this.angleSlice * i - Math.PI / 2) )
-        .attr('cy', (d: any,i: any) =>
-          this.rScale(d.value) * Math.sin(this.angleSlice * i - Math.PI / 2) )
-        .style('fill', 'none')
-        .style('pointer-events', 'all')
-        .on('mouseover', ((event: any,d: any,i: any) => {
-          let newX = parseFloat(d3.select(event).attr('cx')) - 10;
-          let newY = parseFloat(d3.select(event).attr('cy')) - 10;
-          tooltip
-            .attr('x', newX)
-            .attr('y', newY)
-            .text(this.formatPercent(d.value))
-            .transition()
-            .duration(200)
-            .style('opacity', 1)
-          }))
-        .on('mouseout', () => {
-          tooltip
-            .transition()
-            .duration(200)
-            .style('opacity', 0)
-          })
-    
-    const tooltip = container.append('text')
-      .attr('class', 'tooltip')
-      .style('opacity', 0)
-    }
+  }
 
 }

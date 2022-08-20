@@ -12,4 +12,8 @@ export class SkillsCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeGraphData() {
+    console.log("locl");
+  }
+
 }

@@ -3,21 +3,51 @@ mat-card {
 	.general-skills {
 		flex-grow: 1;
 		border-right: 1px solid grey;
-		.main-title {
-			font-weight: 500;
-	    font-size: x-large;
-	    color: #585858;
-		}
-		.second-title {
-			color: #828282;
-		}
-		.big-number {
-			font-size: xx-large;
-			font-weight: bold;
-			color: #0B1354;
-		}
 	}
 	.specific-skills {
 		flex-grow: 2;
+		padding-left: 16px;
+		.main-skill-container {
+			margin-bottom: 16px;
+			.ss-header {
+				display: flex;
+				justify-content: space-between;
+			}
+			.bars-container {
+				display: flex;
+		    flex-direction: column;
+		    margin: 0 20px;
+	    	margin-top: 8px;
+		    row-gap: 10px;
+				.progress-container {
+					display: flex;
+					//margin-left: 36px;
+		    	column-gap: 17px;
+		    	align-items: center;
+		    	line-height: 1;
+		    	.skill-name {
+		    		min-width: 65px;
+		    	}
+				}
+			}
+		}
 	}
 }
+
+.main-title {
+	font-weight: 500;
+  font-size: x-large;
+  color: #585858;
+}
+.second-title {
+	color: #828282;
+	font-size: medium;
+}
+.big-number {
+	font-size: xx-large;
+	font-weight: bold;
+	color: #0B1354;
+}
+mat-icon {
+  color: #585858;
+}	
