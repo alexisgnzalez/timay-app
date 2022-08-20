@@ -18,6 +18,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CardsComponent } from './cards/cards.component';
 import { SkillsCardComponent } from './skills-card/skills-card.component';
+import { SkillsChartComponent } from './skills-chart/skills-chart.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SkillsCardComponent } from './skills-card/skills-card.component';
     MainPageComponent,
     PageNotFoundComponent,
     CardsComponent,
-    SkillsCardComponent
+    SkillsCardComponent,
+    SkillsChartComponent
   ],
   imports: [
     BrowserModule,
