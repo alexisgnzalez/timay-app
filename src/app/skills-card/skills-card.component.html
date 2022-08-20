@@ -6,25 +6,8 @@
 				<h5 class="second-title">PRIMARY TEXT</h5>
 				<span class="big-number">5.876,7</span>
 			</div>
-			<iframe
-				width="100%"
-				height="684"
-				frameborder="0"
-				scrolling="no"
-				(load)="resizeIframe(this)"
-  			src="https://observablehq.com/embed/@xillegas/radar-chart-playground?cells=chartBasic">		
-  		</iframe>
-
-  		<div id="observablehq-chartBasic-238c18a1"></div>
-			<p>Credit: <a href="https://observablehq.com/@alexis/radar-chart-playground/3">radar chart playground by Alexis González</a></p>
-
-				<script type="module">
-				import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-				import define from "https://api.observablehq.com/@alexis/radar-chart-playground/3.js?v=3";
-				new Runtime().module(define, name => {
-				  if (name === "chartBasic") return new Inspector(document.querySelector("#observablehq-chartBasic-238c18a1"));
-				});
-				</script>
+  		<div #directedGraph>
+			</div>
 		</div>
 
 		<div class="specific-skills">
