@@ -1,0 +1,39 @@
+.mi-banner {
+  background: url("../../assets/img/Hexagon.svg");
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  text-align: center;
+  padding-bottom: 40px;
+  color: white;
+  font-family: 'Prompt', sans-serif;
+
+  h1 {
+    margin: 30px 0;
+    font-size: 50px;
+    font-weight: bolder;
+    line-height: normal;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  p {
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 30px 0;
+    line-height: normal;
+}
+
+  button {
+    border: none;
+    background-color: #038387;
+    color: whitesmoke;
+    border-radius: 4px;
+    padding: 16px 48px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      background-color: #02BDAA;
+    }
+
+  }
+}
