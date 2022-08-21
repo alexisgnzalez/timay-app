@@ -7,7 +7,9 @@
 				<span class="big-number">5.876,7</span>
 			</div>
   		<div>
-  			<app-skills-chart></app-skills-chart>
+  			<app-skills-chart
+  				[data]="data">
+  			</app-skills-chart>
 			</div>
 		</div>
 
@@ -32,8 +34,7 @@
 							HTML
 						</div>
 						<mat-progress-bar
-							mode="determinate" value="72"
-							class="barra">		
+							mode="determinate" value="72">		
 						</mat-progress-bar>
 						<div>
 							72%
