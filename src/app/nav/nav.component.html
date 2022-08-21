@@ -11,9 +11,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <span>El Templo de Atenea</span>
-      <span class="example-spacer"></span>
+    <mat-toolbar color="primary" class="d-flex justify-content-between">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -21,6 +19,9 @@
         (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
+      <!-- <span class="example-spacer"></span> -->
+      <span>El Templo de Atenea</span>
+      <a href="/profile-page" class="profile-button"><mat-icon>account_circle</mat-icon></a>
     </mat-toolbar>
     <!-- Add Content Here -->
     <div class="layout-container">
