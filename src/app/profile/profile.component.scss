@@ -48,3 +48,40 @@
 	}
 
 }
+
+.wrapper-cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+	width: 100%;
+	.cards {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		text-align: left;
+		.title-head {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			padding: 15px 30px;
+			position: relative;
+			flex: 1;
+			.img-develop {
+				width: 64px;
+				height: 64px;
+			}
+			.text-info-head {
+				text-transform: uppercase;
+				font-weight: 700;
+				letter-spacing: 2px;
+				word-wrap: break-word;
+				position: relative;
+			}
+		}
+		.text-info {
+			word-wrap: break-word;
+			position: relative;
+			margin: 0 0 0 94px;
+		}
+	}
+}
