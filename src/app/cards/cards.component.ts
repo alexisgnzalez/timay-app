@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-cards',
@@ -8,9 +9,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class CardsComponent implements OnInit {
 
-  constructor() { }
+  @Input() data: any;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  redirectToFinal() {
+    this.router.navigate(['/final']);
   }
 
 }

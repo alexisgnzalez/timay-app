@@ -1,1 +1,5 @@
-
+#dashboard-container {
+  display: flex;
+  row-gap: 24px;
+  flex-direction: column;
+}

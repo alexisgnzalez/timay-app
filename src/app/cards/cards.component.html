@@ -1,70 +1,70 @@
 <div class="layout-container">
 	<div class="wrapper-cards">
 		<div class="card-product-main">
-			<img src="assets/img/avatar-profile.png" alt="foto de perfil" class="img-main"/>
+			<img [src]="data.profilePic" alt="foto de perfil" class="img-main"/>
 			<div class="title-main">
-				<h2>Sofia Gonzales</h2>
-				<p>Frontend Developer</p>
+				<h2>{{data.name}}</h2>
+				<p>{{data.profession}}</p>
 			</div>
 		</div>
 		<div class="card-product box-dev">
 			<div class="wrapper-img-develop">
-				<img class="img-develop" src="assets/img/icon-develop.svg" alt="develop skill"/>
+				<img class="img-develop" [src]="data.generalSkills.data[0][0].icon" alt="develop skill"/>
 			</div>
 			<div class="card-product-infos">
 				<div class="card-product-info-title">
-					<p>Frontend Development</p>
-					<p>70%</p>
+					<p>{{data.generalSkills.data[0][0].axis}}</p>
+					<p>{{data.generalSkills.data[0][0].value | percent}}</p>
 				</div>
-				<mat-progress-bar mode="determinate" class="height development" value="70"></mat-progress-bar>
+				<mat-progress-bar mode="determinate" class="height development" [value]="data.generalSkills.data[0][0].value * 100"></mat-progress-bar>
 			</div>
 		</div>
 		<div class="card-product box-back">
 			<div class="wrapper-img-backend">
-				<img class="img-backend" src="assets/img/icon-backend.svg" alt="backend skill"/>
+				<img class="img-backend" [src]="data.generalSkills.data[0][1].icon" alt="backend skill"/>
 			</div>
 			<div class="card-product-infos">
 				<div class="card-product-info-title">
-					<p>Backend Development</p>
-					<p>27%</p>
+					<p>{{data.generalSkills.data[0][1].axis}}</p>
+					<p>{{data.generalSkills.data[0][1].value | percent}}</p>
 				</div>
-				<mat-progress-bar mode="determinate" class="height backend" value="27"></mat-progress-bar>
+				<mat-progress-bar mode="determinate" class="height backend" [value]="data.generalSkills.data[0][1].value * 100"></mat-progress-bar>
 			</div>
 		</div>
 		<div class="card-product box-leader">
 			<div class="wrapper-img-leadership">
-				<img class="img-leadership" src="assets/img/icon-leadership.svg" alt="leadership skill"/>
+				<img class="img-leadership" [src]="data.generalSkills.data[0][2].icon" alt="leadership skill"/>
 			</div>
 			<div class="card-product-infos">
 				<div class="card-product-info-title">
-					<p>Leadership</p>
-					<p>2%</p>
+					<p>{{data.generalSkills.data[0][2].axis}}</p>
+					<p>{{data.generalSkills.data[0][2].value | percent}}</p>
 				</div>
-				<mat-progress-bar mode="determinate" class="height leadership" value="2"></mat-progress-bar>
+				<mat-progress-bar mode="determinate" class="height leadership" [value]="data.generalSkills.data[0][2].value * 100"></mat-progress-bar>
 			</div>
 		</div>
 		<div class="card-product box-design">
 			<div class="wrapper-img-design">
-				<img class="img-design" src="assets/img/icon-design.svg" alt="design skill"/>
+				<img class="img-design" [src]="data.generalSkills.data[0][3].icon" alt="design skill"/>
 			</div>
 			<div class="card-product-infos">
 				<div class="card-product-info-title">
-					<p>Design</p>
-					<p>22%</p>
+					<p>{{data.generalSkills.data[0][3].axis}}</p>
+					<p>{{data.generalSkills.data[0][3].value | percent}}</p>
 				</div>
-				<mat-progress-bar mode="determinate" class="height design" value="22"></mat-progress-bar>
+				<mat-progress-bar mode="determinate" class="height design" [value]="data.generalSkills.data[0][3].value * 100"></mat-progress-bar>
 			</div>
 		</div>
-		<div class="card-product box-soft">
+		<div class="card-product box-soft" (click)="redirectToFinal()">
 			<div class="wrapper-img-software">
-				<img class="img-software" src="assets/img/icon-software.svg" alt="software skill"/>
+				<img class="img-software" [src]="data.generalSkills.data[0][4].icon" alt="software skill"/>
 			</div>
 			<div class="card-product-infos">
 				<div class="card-product-info-title">
-					<p>Software Architecture</p>
-					<p>15%</p>
+					<p>{{data.generalSkills.data[0][4].axis}}</p>
+					<p>{{data.generalSkills.data[0][4].value | percent}}</p>
 				</div>
-				<mat-progress-bar mode="determinate" class="height software" value="15"></mat-progress-bar>
+				<mat-progress-bar mode="determinate" class="height software" [value]="data.generalSkills.data[0][4].value * 100"></mat-progress-bar>
 			</div>
 		</div>
 	</div>

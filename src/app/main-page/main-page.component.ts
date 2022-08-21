@@ -7,8 +7,14 @@ import data from '../data/data1.json';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent {
-  // userData: any = data;
+  
+  userData: any;
+  currentGraphData: any;
+  currentSkill: any;
+
   constructor() {
-    console.log(data);
+    this.userData = data;
+    this.currentGraphData = data.generalSkills.data;
+    this.currentSkill = data.generalSkills;
   }
 }

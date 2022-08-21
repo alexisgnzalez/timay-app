@@ -58,6 +58,7 @@ export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.data);
     this.axesDomain = this.data[0].map((d: any) => d.axis);
     this.axesLength =  this.data[0].length;
     this.maxValue = d3.max(_.flatten(this.data).map((d: any) => d.value));
