@@ -21,7 +21,11 @@
 }
 
 .layout-container {
-  margin: 3% 15%;
+  max-width: 900px;
+  margin: 24px auto;
+  display: flex;
+  flex-direction: column;
+  row: 24px;
 }
 
 .profile-button {
