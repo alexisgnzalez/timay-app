@@ -5,13 +5,16 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { CardsComponent } from './cards/cards.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SkillsCardComponent } from './skills-card/skills-card.component';
+import { LandingComponent } from './landing/landing.component';
+import { FinalComponent } from './final/final.component';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/main-page', pathMatch: 'full' },
-  { path: 'main-page', component: MainPageComponent },
+  { path: '',   redirectTo: '/landing', pathMatch: 'full' },
+  { path: 'landing', component: LandingComponent },
   { path: 'cards-page', component: CardsComponent},
   { path: 'profile-page', component: ProfileComponent},
   { path: 'skills-page', component: SkillsCardComponent },
+  { path: 'final', component: FinalComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

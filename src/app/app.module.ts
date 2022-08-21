@@ -20,6 +20,8 @@ import { CardsComponent } from './cards/cards.component';
 import { SkillsCardComponent } from './skills-card/skills-card.component';
 import { SkillsChartComponent } from './skills-chart/skills-chart.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { LandingComponent } from './landing/landing.component';
+import { FinalComponent } from './final/final.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     PageNotFoundComponent,
     CardsComponent,
     SkillsCardComponent,
-    SkillsChartComponent
+    SkillsChartComponent,
+    LandingComponent,
+    FinalComponent
   ],
   imports: [
     BrowserModule,
