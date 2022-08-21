@@ -1,5 +1,6 @@
 mat-card {
 	display: flex;
+	max-height: 500px;
 	.general-skills {
 		flex-grow: 1;
 		border-right: 1px solid grey;
@@ -7,6 +8,10 @@ mat-card {
 	.specific-skills {
 		flex-grow: 2;
 		padding-left: 16px;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+	    display: none;
+		}
 		.main-skill-container {
 			margin-bottom: 16px;
 			.ss-header {
@@ -50,4 +55,19 @@ mat-card {
 }
 mat-icon {
   color: #585858;
-}	
+}
+
+.barra{
+	::ng-deep .mat-progress-bar-fill::after {
+	  background-color: black;
+	}
+
+}
+
+::ng-deep .mat-progress-bar-buffer {
+  background: #E4E8EB;
+}
+
+::ng-deep .mat-progress-bar {
+  border-radius: 2px;
+}
