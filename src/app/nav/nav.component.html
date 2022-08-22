@@ -8,8 +8,8 @@
       <a mat-list-item routerLink="/cards-page"><mat-icon> category</mat-icon> <span class="ml-1">Categorías</span></a>
       <a mat-list-item routerLink="/skills-page"><mat-icon> bar_chart</mat-icon> <span class="ml-1">Habilidades</span></a>
       <a mat-list-item routerLink="/profile-page"><mat-icon>account_circle</mat-icon> <span class="ml-1">Perfil</span></a>
-      <a mat-list-item routerLink="/landing"><mat-icon>account_circle</mat-icon> <span class="ml-1">Landing</span></a>
-      <a mat-list-item routerLink="/final"><mat-icon>account_circle</mat-icon> <span class="ml-1">Final</span></a>
+      <a mat-list-item routerLink="/landing"><mat-icon>home</mat-icon> <span class="ml-1">Landing</span></a>
+      <a mat-list-item routerLink="/final"><mat-icon>info</mat-icon> <span class="ml-1">Final</span></a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -26,7 +26,7 @@
       <a href="/profile-page" class="profile-button"><mat-icon>account_circle</mat-icon></a>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <div class="layout-container">
+    <div [ngClass]="{'layout-container': isLayoutOn}">
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
