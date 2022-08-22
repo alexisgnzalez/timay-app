@@ -15,7 +15,7 @@
     ]
   },
   "frontend": {
-    "name": "Habilidades Generales",
+    "name": "Frontend Development",
     "mainColor": "#90a7b0",
     "data": [
       [
@@ -28,7 +28,7 @@
     ]
   },
   "backend": {
-    "name": "Frontend Development",
+    "name": "Backend Development",
     "mainColor": "#00d0d9",
     "data": [
       [
