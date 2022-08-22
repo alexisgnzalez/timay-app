@@ -96,9 +96,5 @@ export class MainPageComponent {
     data.forEach((v: any) => sum = sum + v);
     prom = sum / data.length; 
     return prom;
-  }
-
-
-
-  
+  }  
 }
