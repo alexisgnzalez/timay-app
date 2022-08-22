@@ -7,14 +7,16 @@ import { ProfileComponent } from './profile/profile.component';
 import { SkillsCardComponent } from './skills-card/skills-card.component';
 import { LandingComponent } from './landing/landing.component';
 import { FinalComponent } from './final/final.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/main-page', pathMatch: 'full' },
+  { path: '',   redirectTo: '/landing', pathMatch: 'full' },
   { path: 'main-page', component: MainPageComponent },
   { path: 'cards-page', component: CardsComponent},
   { path: 'profile-page', component: ProfileComponent},
   { path: 'skills-page', component: SkillsCardComponent },
   { path: 'landing', component: LandingComponent },
+  { path: 'about-us', component: AboutUsComponent },
   { path: 'final', component: FinalComponent },
   { path: '**', component: PageNotFoundComponent },
 ];

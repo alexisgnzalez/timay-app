@@ -22,6 +22,7 @@ import { SkillsChartComponent } from './skills-chart/skills-chart.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { LandingComponent } from './landing/landing.component';
 import { FinalComponent } from './final/final.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FinalComponent } from './final/final.component';
     SkillsCardComponent,
     SkillsChartComponent,
     LandingComponent,
-    FinalComponent
+    FinalComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

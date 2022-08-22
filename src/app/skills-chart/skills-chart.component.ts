@@ -58,6 +58,77 @@ export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.data);
+    /*this.axesDomain = this.data[0].map((d: any) => d.axis);
+    this.axesLength =  this.data[0].length;
+    this.maxValue = d3.max(_.flatten(this.data).map((d: any) => d.value));
+    this.angleSlice = Math.PI * 2 / this.axesLength;
+    this.rScale = d3.scaleLinear()
+      .domain([0, this.maxValue])
+      .range([0, this.radius]);
+    this.radarLine = d3.lineRadial()
+      .curve(d3["curveCatmullRomClosed"])
+      .radius((d: any) => this.rScale(d))
+      .angle((d: any, i) => i * this.angleSlice);*/
+    this.initVars();
+    this.createRadarChart();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+
+    if (this.viewLoaded) {
+      this.initVars();
+      this.axisGrid.selectAll(".levels")
+        .data(d3.range(1,(this.axisCircles+1)).reverse())
+        .attr("r", (d: any, i: any) => this.radius/this.axisCircles*d);
+      
+      this.axisGrid.selectAll(".axisLabel")
+        .data(d3.range(1,(this.axisCircles+1)).reverse())
+          .attr('y', (d: any) => (-d * this.radius) / this.axisCircles)
+          .text((d: any) =>
+            this.formatPercent(this.maxValue * d / this.axisCircles));
+
+      this.axesDomain = changes['data'].currentValue[0].map((d: any) => d.axis);
+
+      this.axis.select('text')
+        .data(this.axesDomain)
+        .transition()
+        .duration(2000)
+        .text((d: any) => d);
+      
+      this.plots.select('path')
+        .data(this.data)
+        .attr("d", (d: any) => this.radarLine(d.map((v: any) => v.value)));
+
+      console.log(this.plots.selectAll("circle"));
+
+      /*this.plots.select('g')
+        .data(this.data)
+        //.join('g')
+          .attr("data-name", (d: any, i: any) => this.device(i));
+          // .attr("fill", "steelblue")
+          // .attr("fill-opacity", 0.3)
+          // .attr("stroke", "steelblue");*/
+
+      this.plots.selectAll("circle")
+        .data(this.data[0])
+        //.join("circle")
+          .attr("r", this.dotRadius)
+          .attr("cx", (d: any,i: any) =>
+            this.rScale(d.value) * Math.cos(this.angleSlice*i - Math.PI/2))
+          .attr("cy", (d: any,i: any) =>
+            this.rScale(d.value) * Math.sin(this.angleSlice*i - Math.PI/2));
+        //  .style("fill-opacity", 0.8);*/
+    }
+  }
+
+  ngAfterViewInit() {
+    this.viewLoaded = true;
+  }
+
+  device = (d: any) => ["Grecia"][d];
+
+  initVars() {
     this.axesDomain = this.data[0].map((d: any) => d.axis);
     this.axesLength =  this.data[0].length;
     this.maxValue = d3.max(_.flatten(this.data).map((d: any) => d.value));
@@ -69,31 +140,7 @@ export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
       .curve(d3["curveCatmullRomClosed"])
       .radius((d: any) => this.rScale(d))
       .angle((d: any, i) => i * this.angleSlice);
-    this.createRadarChart();
   }
-
-  ngOnChanges(changes: SimpleChanges) {
-
-    if (this.viewLoaded) {
-      console.log("es muy rapido: ", changes['data'].currentValue);
-      this.axesDomain = changes['data'].currentValue[0].map((d: any) => d.axis);
-      this.axis.select('text')
-        .data(this.axesDomain)
-        .transition()
-        .duration(2000)
-        .text((d: any) => d);
-      
-      this.plots.select('path')
-        .data(this.data)
-        .attr("d", (d: any) => this.radarLine(d.map((v: any) => v.value)))
-    }
-  }
-
-  ngAfterViewInit() {
-    this.viewLoaded = true;
-  }
-
-  device = (d: any) => ["Grecia"][d];
 
   createRadarChart(): void {
     this.svg = d3.select("div#radar-chart")

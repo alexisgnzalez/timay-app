@@ -1,1 +1,10 @@
-<div>hola soy el dashboard</div>
+<div id="dashboard-container">
+  <app-cards
+    [data]="userData"
+    (theCardIs)="giveMeTheCard($event)">    
+  </app-cards>
+  <app-skills-card
+    [charData]="currentGraphData"
+    [currentSkill]="currentSkill">
+  </app-skills-card>
+</div>
