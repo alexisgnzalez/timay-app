@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import data from '../data/data1.json';
+import data from '../data/data2.json';
 
 @Component({
   selector: 'app-main-page',

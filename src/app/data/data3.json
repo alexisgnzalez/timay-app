@@ -1,9 +1,11 @@
 {
   "name": "Roberto Patiño",
   "profession": "Web Developer",
-  "profilePic": "assets/img/avatar-profile.png",
+  "profilePic": "assets/img/facePic1.jpg",
   "generalSkills": {
     "name": "Habilidades Generales",
+    "class": "development",
+    "mainColor": "#90a7b0",
     "data": [
       [
         { "axis": "Frontend", "value": 0.5, "icon": "assets/img/icon-develop.svg"},
@@ -16,6 +18,7 @@
   },
   "frontend": {
     "name": "Frontend Development",
+    "class": "development",
     "mainColor": "#90a7b0",
     "data": [
       [
@@ -29,6 +32,7 @@
   },
   "backend": {
     "name": "Backend Development",
+    "class": "backend",
     "mainColor": "#00d0d9",
     "data": [
       [
@@ -42,6 +46,7 @@
   },
   "leadership": {
     "name": "Liderazgo",
+    "class": "leadership",
     "mainColor": "#ac6acf",
     "data": [
       [
@@ -55,6 +60,7 @@
   },
   "design": {
     "name": "Diseñador UX/UI",
+    "class": "design",
     "mainColor": "#f4e18d",
     "data": [
       [
