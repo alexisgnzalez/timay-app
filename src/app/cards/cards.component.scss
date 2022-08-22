@@ -18,6 +18,7 @@
 		width: 120px;
 		object-fit: cover;
 		padding-right: 16px;
+		border-radius: 50%;
 	}
 
 	.title-main {
@@ -71,14 +72,6 @@
 	box-shadow: 0px 3px 2px 0px rgba(195,174,170,1);
 }
 // fin colores box-shadows //
-
-// .card-product img {
-//   height: 90px;
-//   width: 90px;
-//   object-fit: cover;
-// 	border-radius: 50%;
-// 	padding-left: 16px;
-// }
 
 .card-product p {
 	font-weight: bold;
