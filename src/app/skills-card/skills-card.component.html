@@ -1,13 +1,14 @@
 <div class="layout-container">
 	<mat-card>
 		<div class="general-skills">
-			<h2 class="main-title">Mapa de Habilidades</h2>
+			<h2 class="main-title">Mapa de Destrezas</h2>
 			<!-- <div>
 				<h5 class="second-title">PRIMARY TEXT</h5>
 				<span class="big-number">5.876,7</span>
 			</div> -->
   		<div>
   			<app-skills-chart
+  				[mainColor]="color"
   				[data]="charData">
   			</app-skills-chart>
 			</div>

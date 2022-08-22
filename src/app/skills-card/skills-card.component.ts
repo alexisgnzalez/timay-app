@@ -9,6 +9,7 @@ export class SkillsCardComponent implements OnInit {
 
   @Input() charData: any;
   @Input() currentSkill: any;
+  @Input() color: string = 'steelblue';
 
   /*data = [
     [

@@ -10,6 +10,7 @@ import * as _ from 'underscore';
 export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
 
   @Input() data: Array<any> = [];
+  @Input() mainColor: string = 'steelblue'; 
   curveTypes = [
     "curveBasis",
     "curveBasisClosed",
@@ -58,7 +59,7 @@ export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.data);
+    //console.log(this.data);
     /*this.axesDomain = this.data[0].map((d: any) => d.axis);
     this.axesLength =  this.data[0].length;
     this.maxValue = d3.max(_.flatten(this.data).map((d: any) => d.value));
@@ -75,7 +76,6 @@ export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-
     if (this.viewLoaded) {
       this.initVars();
       this.axisGrid.selectAll(".levels")
@@ -98,21 +98,25 @@ export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
       
       this.plots.select('path')
         .data(this.data)
+        .attr("fill", this.mainColor)
+        .attr("stroke", this.mainColor)
         .attr("d", (d: any) => this.radarLine(d.map((v: any) => v.value)));
 
-      console.log(this.plots.selectAll("circle"));
+      //console.log(this.plots.selectAll("circle"));
 
-      /*this.plots.select('g')
+      /*this.plots.selectAll('g')
         .data(this.data)
         //.join('g')
-          .attr("data-name", (d: any, i: any) => this.device(i));
-          // .attr("fill", "steelblue")
+        //  .attr("data-name", (d: any, i: any) => this.device(i));
+          .attr("fill", this.mainColor)
           // .attr("fill-opacity", 0.3)
-          // .attr("stroke", "steelblue");*/
+          .attr("stroke", this.mainColor);*/
 
       this.plots.selectAll("circle")
         .data(this.data[0])
         //.join("circle")
+          .attr("fill", this.mainColor)
+          .attr("stroke", this.mainColor)
           .attr("r", this.dotRadius)
           .attr("cx", (d: any,i: any) =>
             this.rScale(d.value) * Math.cos(this.angleSlice*i - Math.PI/2))
@@ -214,15 +218,17 @@ export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
       .data(this.data)
       .join('g')
         .attr("data-name", (d: any, i: any) => this.device(i))
-        .attr("fill", "steelblue")
-        .attr("fill-opacity", 0.3)
-        .attr("stroke", "steelblue");
+        //.attr("fill", "#00d0d9")
+        //.attr("fill-opacity", 0.3);
+        //.attr("stroke", "#00d0d9");
 
     this.plots.append('path')
       .attr("d", (d: any) => this.radarLine(d.map((v: any) => v.value)))
-      .attr("fill", (d: any, i: any) => this.color(i))
+      // .attr("fill", (d: any, i: any) => this.color(i))
+      .attr("fill", this.mainColor)
       .attr("fill-opacity", 0.3)
-      .attr("stroke", (d: any, i: any) => this.color(i))
+      //.attr("stroke", (d: any, i: any) => this.color(i))
+      .attr("stroke", this.mainColor)
       .attr("stroke-width", 2)
       .attr('class', 'radarArea2')
       .on('mouseover', function(d: any) {
@@ -248,6 +254,8 @@ export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
           this.rScale(d.value) * Math.cos(this.angleSlice*i - Math.PI/2))
         .attr("cy", (d: any,i: any) =>
           this.rScale(d.value) * Math.sin(this.angleSlice*i - Math.PI/2))
+        .attr("fill", this.mainColor)
+        .attr("stroke", this.mainColor)
         .style("fill-opacity", 0.8);
   }
 }
