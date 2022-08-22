@@ -1,39 +1,39 @@
-.card-trip {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.card-trip > img {
-  height: 200px;
+.wrapper-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
   width: 100%;
-  object-fit: cover;
-}
-
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
-
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+  margin-top: 30px;
+  .cards {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: left;
+    .title-head {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 6px 30px;
+      position: relative;
+      flex: 1;
+      flex-direction: column;
+      .img-develop {
+        width: auto;
+        height: 70px;
+      }
+      .text-info-head {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        word-wrap: break-word;
+        position: relative;
+      }
+    }
+    .text-info {
+      word-wrap: break-word;
+      position: relative;
+      text-align: center;
+      color: #585858 !important;
+    }
+  }
 }
