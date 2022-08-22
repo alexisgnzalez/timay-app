@@ -59,15 +59,19 @@ export class MainPageComponent {
     const index = dataSet.map(o => o.value).indexOf(aux);
     switch (dataSet[index].axis) {
       case "Frontend":
+        this.currentSkill.class = data.frontend.class; 
         return data.frontend.mainColor;
         break;
       case "Backend":
+        this.currentSkill.class = data.backend.class;
         return data.backend.mainColor;
         break;
       case "Liderazgo":
+        this.currentSkill.class = data.leadership.class;
         return data.leadership.mainColor;
         break;
       case "Diseño":
+        this.currentSkill.class = data.design.class;
         return data.design.mainColor;
         break;
       default:

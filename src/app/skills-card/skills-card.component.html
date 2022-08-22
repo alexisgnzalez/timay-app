@@ -37,7 +37,8 @@
 							{{item.axis}}
 						</div>
 						<mat-progress-bar
-							class="height development"
+							class="height"
+							[ngClass]='barClasses'
 							mode="determinate" [value]="item.value * 100">		
 						</mat-progress-bar>
 						<div class="skill-name percentage-number">
