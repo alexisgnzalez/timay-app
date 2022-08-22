@@ -111,7 +111,7 @@ export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
           // .attr("stroke", "steelblue");*/
 
       this.plots.selectAll("circle")
-        .data(this.data)
+        .data(this.data[0])
         //.join("circle")
           .attr("r", this.dotRadius)
           .attr("cx", (d: any,i: any) =>
