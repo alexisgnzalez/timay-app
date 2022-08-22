@@ -10,7 +10,7 @@
         { "axis": "Backend", "value": 0.5, "icon": "assets/img/icon-backend.svg" },
         { "axis": "Liderazgo", "value": 0.2 , "icon": "assets/img/icon-leadership.svg"},
         { "axis": "Diseño", "value": 0.1 , "icon": "assets/img/icon-design.svg"},
-        { "axis": "Secret Skill", "value": 0.2 , "icon": "assets/img/icon-software.svg"}
+        { "axis": "Secret Skill", "value": 0.2 , "icon": "assets/img/icon-secret-skill.svg"}
       ]
     ]
   },
