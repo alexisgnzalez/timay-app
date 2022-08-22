@@ -1,16 +1,16 @@
 {
-  "name": "Grecia L'antigua",
+  "name": "Roberto Patiño",
   "profession": "Web Developer",
   "profilePic": "assets/img/avatar-profile.png",
   "generalSkills": {
     "name": "Habilidades Generales",
     "data": [
       [
-        { "axis": "Frontend", "value": 0.6, "icon": "assets/img/icon-develop.svg"},
-        { "axis": "Backend", "value": 0.5, "icon": "assets/img/icon-backend.svg" },
+        { "axis": "Frontend", "value": 0.5, "icon": "assets/img/icon-develop.svg"},
+        { "axis": "Backend", "value": 0.9, "icon": "assets/img/icon-backend.svg" },
         { "axis": "Liderazgo", "value": 0.2 , "icon": "assets/img/icon-leadership.svg"},
         { "axis": "Diseño", "value": 0.1 , "icon": "assets/img/icon-design.svg"},
-        { "axis": "Secret Skill", "value": 0.2 , "icon": "assets/img/icon-secret-skill.svg"}
+        { "axis": "Secret Skill", "value": 0.8 , "icon": "assets/img/icon-secret-skill.svg"}
       ]
     ]
   },
@@ -19,11 +19,11 @@
     "mainColor": "#90a7b0",
     "data": [
       [
-        { "axis": "HTML", "value": 0.9, "icon": ""},
-        { "axis": "CSS", "value": 0.6, "icon": "" },
+        { "axis": "HTML", "value": 0.5, "icon": ""},
+        { "axis": "CSS", "value": 0.7, "icon": "" },
         { "axis": "Javascript", "value": 1, "icon": ""},
         { "axis": "React", "value": 0.1, "icon": ""},
-        { "axis": "Angular", "value": 0.7, "icon": ""}
+        { "axis": "Angular", "value": 0.0, "icon": ""}
       ]
     ]
   },
@@ -35,8 +35,8 @@
         { "axis": "Java", "value": 1, "icon": ""},
         { "axis": "API", "value": 0.8, "icon": "" },
         { "axis": "SQL", "value": 0.7 , "icon": ""},
-        { "axis": "NoSQL", "value": 0.1 , "icon": ""},
-        { "axis": "Python", "value": 0.1 , "icon": ""}
+        { "axis": "NoSQL", "value": 0.5 , "icon": ""},
+        { "axis": "Python", "value": 0.9 , "icon": ""}
       ]
     ]
   },
@@ -45,10 +45,10 @@
     "mainColor": "#ac6acf",
     "data": [
       [
-        { "axis": "Comunicación", "value": 0.5, "icon": ""},
-        { "axis": "Gerencia", "value": 0.4, "icon": "" },
+        { "axis": "Comunicación", "value": 0.2, "icon": ""},
+        { "axis": "Gerencia", "value": 0.0, "icon": "" },
         { "axis": "Teamwork", "value": 0.1 , "icon": ""},
-        { "axis": "Agile", "value": 0 , "icon": ""},
+        { "axis": "Agile", "value": 0.4 , "icon": ""},
         { "axis": "Empathy", "value": 0.1 , "icon": ""}
       ]
     ]
@@ -58,11 +58,11 @@
     "mainColor": "#f4e18d",
     "data": [
       [
-        { "axis": "Figma", "value": 0.7, "icon": ""},
-        { "axis": "Adobe XD", "value": 0.6, "icon": "" },
-        { "axis": "Ilustrator", "value": 0.3, "icon": ""},
+        { "axis": "Figma", "value": 0.2, "icon": ""},
+        { "axis": "Adobe XD", "value": 0.0, "icon": "" },
+        { "axis": "Ilustrator", "value": 0.1, "icon": ""},
         { "axis": "Photoshop", "value": 0.2, "icon": ""},
-        { "axis": "After Effect", "value": 0.3, "icon": ""}
+        { "axis": "After Effect", "value": 0.0, "icon": ""}
       ]
     ]
   }

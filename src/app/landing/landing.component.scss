@@ -30,7 +30,12 @@
     text-shadow: 1px 1px 2px rgba(138, 138, 138, 0.678);
   }
 
-  button {
+  a {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
     border: none;
     background-color: #038387;
     color: whitesmoke;
