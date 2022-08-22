@@ -16,7 +16,7 @@ export class MainPageComponent {
   constructor() {
     this.userData = data;
     this.currentGraphData = data.generalSkills.data;
-    this.currentSkill = data.generalSkills;
+    this.currentSkill = this.calculateGeneralSkills();
     this.color = this.getMainColor(data.generalSkills.data[0]);
   }
 
@@ -24,8 +24,8 @@ export class MainPageComponent {
     console.log(event);
     switch (event) {
       case "profile":
-        this.currentGraphData = data.generalSkills.data;
-        this.currentSkill = data.generalSkills;
+        this.currentGraphData = this.calculateGeneralSkills().data;
+        this.currentSkill = this.calculateGeneralSkills();
         this.color = this.getMainColor(data.generalSkills.data[0]);
         break;
       case "frontend":
@@ -80,4 +80,21 @@ export class MainPageComponent {
         break;
     }
   }
+
+  calculateGeneralSkills(): any {
+    let generalSkills = data.generalSkills;
+    generalSkills.data[0][0].value = this.calculateProm(data.frontend.data[0].map(o => o.value));
+    generalSkills.data[0][1].value = this.calculateProm(data.backend.data[0].map(o => o.value));
+    generalSkills.data[0][2].value = this.calculateProm(data.leadership.data[0].map(o => o.value));
+    generalSkills.data[0][3].value = this.calculateProm(data.design.data[0].map(o => o.value));
+    return generalSkills;
+  }
+
+  calculateProm(data: any): number {
+    let sum: number = 0;
+    let prom: number = 0;
+    data.forEach((v: any) => sum = sum + v);
+    prom = sum / data.length; 
+    return prom;
+  } 
 }
