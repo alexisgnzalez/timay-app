@@ -46,6 +46,7 @@
     margin: 0;
     padding: 10px;
     font-size: 16px;
+    text-align: center;
   }
 }
 
@@ -77,6 +78,9 @@
         letter-spacing: 2px;
         word-wrap: break-word;
         position: relative;
+        color: #585858;
+        font-weight: bold;
+        font-size: 13px;
       }
     }
     .text-info {
