@@ -1,0 +1,41 @@
+<div class="layout-container">
+	<mat-card [ngClass]="{'span-height': justGraph}">
+		<div
+			class="general-skills"
+			[ngClass]="{'whole-screen': justGraph}">
+			<h2 class="main-title">Mapa de Destrezas</h2>
+  		<div>
+  			<app-skills-chart
+  				[mainColor]="color"
+  				[data]="charData">
+  			</app-skills-chart>
+			</div>
+		</div>
+		<div
+			class="specific-skills"
+			[ngClass]="{'no-screen': justGraph}"
+			*ngIf="currentSkill.name !== 'Habilidades Generales'">
+			<h2 class="main-title">{{currentSkill.name}}</h2>
+			<div class="main-skill-container">
+				<div class="bars-container">
+					<div
+						class="progress-container"
+						*ngFor="let item of charData[0]; index as i;">
+						<div class="skill-name">
+							{{item.axis}}
+						</div>
+						<mat-progress-bar
+							class="height"
+							[ngClass]='barClasses'
+							mode="determinate" [value]="item.value * 100">		
+						</mat-progress-bar>
+						<div class="skill-name percentage-number">
+							{{item.value | percent}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</mat-card>
+</div>
+

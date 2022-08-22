@@ -1,0 +1,54 @@
+.mi-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../../assets/img/Hexagon.svg");
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  text-align: center;
+  padding-bottom: 40px;
+  color: white;
+  font-family: 'Prompt', sans-serif;
+  height: 90vh;
+
+  h1 {
+    margin: 25px 10px 0;
+    font-size: 50px;
+    font-weight: bolder;
+    line-height: 1;
+    font-family: 'Prompt', sans-serif;
+    text-shadow: 1px 1px 2px rgba(138, 138, 138, 0.678);
+  }
+
+  p {
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 25px 10px;
+    line-height: normal;
+    text-shadow: 1px 1px 2px rgba(138, 138, 138, 0.678);
+    color: white;
+  }
+
+  a {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    border: none;
+    background-color: #038387;
+    color: whitesmoke;
+    border-radius: 4px;
+    padding: 16px 48px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    margin: 10px;
+
+    &:hover {
+      background-color: #02BDAA;
+    }
+
+  }
+}

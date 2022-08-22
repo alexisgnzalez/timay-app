@@ -17,6 +17,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CardsComponent } from './cards/cards.component';
+import { SkillsCardComponent } from './skills-card/skills-card.component';
+import { SkillsChartComponent } from './skills-chart/skills-chart.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { LandingComponent } from './landing/landing.component';
+import { FinalComponent } from './final/final.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,12 @@ import { CardsComponent } from './cards/cards.component';
     NavComponent,
     MainPageComponent,
     PageNotFoundComponent,
-    CardsComponent
+    CardsComponent,
+    SkillsCardComponent,
+    SkillsChartComponent,
+    LandingComponent,
+    FinalComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +49,8 @@ import { CardsComponent } from './cards/cards.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

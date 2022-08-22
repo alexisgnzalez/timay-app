@@ -1,0 +1,93 @@
+.profile-card {
+  width: 100%px;
+  height: auto;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  .avatar-box {
+    padding: 10px;
+  }
+
+  .user-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .avatar {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border-color: white;
+    border-width: 5px;
+    border-style: solid;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    /* Fonts Gray */
+    color: #585858;
+  }
+
+  h2 {
+    color: rgb(0, 119, 119);
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.wrapper-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  width: 100%;
+  .cards {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: left;
+    .title-head {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 6px 30px;
+      position: relative;
+      flex: 1;
+      flex-direction: column;
+      .img-develop {
+        width: auto;
+        height: 70px;
+      }
+      .text-info-head {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        word-wrap: break-word;
+        position: relative;
+        color: #585858;
+        font-weight: bold;
+        font-size: 13px;
+      }
+    }
+    .text-info {
+      word-wrap: break-word;
+      position: relative;
+      text-align: center;
+      color: #585858 !important;
+    }
+  }
+}

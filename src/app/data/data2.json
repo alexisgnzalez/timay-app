@@ -1,0 +1,69 @@
+{
+  "name": "Minerva Artemisa",
+  "profession": "Web Developer",
+  "profilePic": "assets/img/profile-1.png",
+  "generalSkills": {
+    "name": "Habilidades Generales",
+    "data": [
+      [
+        { "axis": "Frontend", "value": 0.3, "icon": "assets/img/icon-develop.svg"},
+        { "axis": "Backend", "value": 0.1, "icon": "assets/img/icon-backend.svg" },
+        { "axis": "Liderazgo", "value": 0.4 , "icon": "assets/img/icon-leadership.svg"},
+        { "axis": "Diseño", "value": 0.9 , "icon": "assets/img/icon-design.svg"},
+        { "axis": "Secret Skill", "value": 0.2 , "icon": "assets/img/icon-secret-skill.svg"}
+      ]
+    ]
+  },
+  "frontend": {
+    "name": "Frontend Development",
+    "mainColor": "#90a7b0",
+    "data": [
+      [
+        { "axis": "HTML", "value": 0.9, "icon": ""},
+        { "axis": "CSS", "value": 0.6, "icon": "" },
+        { "axis": "Javascript", "value": 0.1, "icon": ""},
+        { "axis": "React", "value": 0.0, "icon": ""},
+        { "axis": "Angular", "value": 0.0, "icon": ""}
+      ]
+    ]
+  },
+  "backend": {
+    "name": "Backend Development",
+    "mainColor": "#00d0d9",
+    "data": [
+      [
+        { "axis": "Java", "value": 0.1, "icon": ""},
+        { "axis": "API", "value": 0.0, "icon": "" },
+        { "axis": "SQL", "value": 0.0 , "icon": ""},
+        { "axis": "NoSQL", "value": 0.0 , "icon": ""},
+        { "axis": "Python", "value": 0.1 , "icon": ""}
+      ]
+    ]
+  },
+  "leadership": {
+    "name": "Liderazgo",
+    "mainColor": "#ac6acf",
+    "data": [
+      [
+        { "axis": "Comunicación", "value": 0.6, "icon": ""},
+        { "axis": "Gerencia", "value": 0.4, "icon": "" },
+        { "axis": "Teamwork", "value": 0.3 , "icon": ""},
+        { "axis": "Agile", "value": 0.6 , "icon": ""},
+        { "axis": "Empathy", "value": 0.3 , "icon": ""}
+      ]
+    ]
+  },
+  "design": {
+    "name": "Diseñador UX/UI",
+    "mainColor": "#f4e18d",
+    "data": [
+      [
+        { "axis": "Figma", "value": 0.9, "icon": ""},
+        { "axis": "Adobe XD", "value": 0.7, "icon": "" },
+        { "axis": "Ilustrator", "value": 0.3, "icon": ""},
+        { "axis": "Photoshop", "value": 0.8, "icon": ""},
+        { "axis": "After Effect", "value": 0.6, "icon": ""}
+      ]
+    ]
+  }
+}

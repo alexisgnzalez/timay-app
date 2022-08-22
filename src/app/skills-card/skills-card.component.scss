@@ -1,0 +1,114 @@
+mat-card {
+	display: flex;
+	max-height: 500px;
+	max-width: 900px;
+	min-width: 856px;
+	&.span-height {
+		max-height: 1200px;
+		justify-content: center;
+	}
+	.general-skills {
+		// flex-grow: 1;
+		width: 50%;
+		border-right: 2px solid #58585899;
+		&.whole-screen {
+			width: 75%;
+			border-right: unset;
+		}
+	}
+	.specific-skills {
+		// flex-grow: 1;
+		width: 50%;
+		padding-left: 16px;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+	    display: none;
+		}
+		.main-skill-container {
+			margin-bottom: 16px;
+			.ss-header {
+				display: flex;
+				justify-content: space-between;
+			}
+			.bars-container {
+				display: flex;
+		    flex-direction: column;
+		    margin: 0 20px;
+	    	margin-top: 42px;
+		    row-gap: 24px;
+				.progress-container {
+					display: flex;
+					//margin-left: 36px;
+		    	column-gap: 17px;
+		    	align-items: center;
+		    	line-height: 1;
+		    	.skill-name {
+		    		min-width: 95px;
+		    		color: #585858;
+		    		font-size: medium;
+		    		&.percentage-number {
+		    			min-width: unset;
+		    		}
+		    	}
+				}
+			}
+		}
+	}
+}
+
+.main-title {
+	font-weight: 500;
+  font-size: x-large;
+  color: #585858;
+  text-align: center;
+}
+.second-title {
+	color: #828282;
+	font-size: medium;
+}
+.big-number {
+	font-size: xx-large;
+	font-weight: bold;
+	color: #0B1354;
+}
+mat-icon {
+  color: #585858;
+}
+
+// colores progress-bar//
+.development {
+	.mat-progress-bar-fill::after {
+    background-color: #90a7b0;
+	}
+}
+
+.backend {
+	.mat-progress-bar-fill::after {
+    background-color: #00d0d9;
+	}
+}
+
+.leadership {
+	.mat-progress-bar-fill::after {
+    background-color: #ac6acf;
+	}
+}
+
+.design {
+	.mat-progress-bar-fill::after {
+    background-color: #f4e18d;
+	}
+}
+
+.software {
+	.mat-progress-bar-fill::after {
+    background-color: #c3aeaa;
+	}
+}
+// fin colores progress-bar//
+
+.height {
+	&.mat-progress-bar {
+    height: 8.5px;
+  }
+}
