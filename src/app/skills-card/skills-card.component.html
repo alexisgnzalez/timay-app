@@ -1,11 +1,11 @@
 <div class="layout-container">
 	<mat-card>
 		<div class="general-skills">
-			<h2 class="main-title">SKILL COMPOSITION</h2>
-			<div>
+			<h2 class="main-title">Mapa de Habilidades</h2>
+			<!-- <div>
 				<h5 class="second-title">PRIMARY TEXT</h5>
 				<span class="big-number">5.876,7</span>
-			</div>
+			</div> -->
   		<div>
   			<app-skills-chart
   				[data]="charData">
@@ -29,8 +29,6 @@
 					</mat-icon>
 				</div> -->
 				<div class="bars-container">
-					
-
 					<div
 						class="progress-container"
 						*ngFor="let item of charData[0]; index as i;">
@@ -38,15 +36,14 @@
 							{{item.axis}}
 						</div>
 						<mat-progress-bar
+							class="height development"
 							mode="determinate" [value]="item.value * 100">		
 						</mat-progress-bar>
-						<div>
+						<div class="skill-name percentage-number">
 							{{item.value | percent}}
 						</div>
 					</div>
-					
-
-					<div class="progress-container">
+				<!-- 	<div class="progress-container">
 						<div class="skill-name">
 							HTML
 						</div>
@@ -101,7 +98,7 @@
 						<div>
 							98%
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

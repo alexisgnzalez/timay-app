@@ -19,11 +19,11 @@
     "mainColor": "#90a7b0",
     "data": [
       [
-        { "axis": "Frontend", "value": 0.6, "icon": ""},
-        { "axis": "Backend", "value": 0.5, "icon": "" },
-        { "axis": "Liderazgo", "value": 0.2 , "icon": ""},
-        { "axis": "Diseño", "value": 0.1 , "icon": ""},
-        { "axis": "Secret Skill", "value": 0.2 , "icon": ""}
+        { "axis": "HTML", "value": 0.9, "icon": ""},
+        { "axis": "CSS", "value": 0.6, "icon": "" },
+        { "axis": "Javascript", "value": 1, "icon": ""},
+        { "axis": "React", "value": 0.1, "icon": ""},
+        { "axis": "Angular", "value": 0.7, "icon": ""}
       ]
     ]
   },

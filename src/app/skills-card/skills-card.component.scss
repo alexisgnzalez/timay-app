@@ -4,11 +4,13 @@ mat-card {
 	max-width: 900px;
 	min-width: 856px;
 	.general-skills {
-		flex-grow: 1;
-		border-right: 1px solid grey;
+		// flex-grow: 1;
+		width: 50%;
+		border-right: 2px solid #58585899;
 	}
 	.specific-skills {
-		flex-grow: 2;
+		// flex-grow: 1;
+		width: 50%;
 		padding-left: 16px;
 		overflow-y: scroll;
 		&::-webkit-scrollbar {
@@ -24,8 +26,8 @@ mat-card {
 				display: flex;
 		    flex-direction: column;
 		    margin: 0 20px;
-	    	margin-top: 8px;
-		    row-gap: 10px;
+	    	margin-top: 42px;
+		    row-gap: 24px;
 				.progress-container {
 					display: flex;
 					//margin-left: 36px;
@@ -33,7 +35,12 @@ mat-card {
 		    	align-items: center;
 		    	line-height: 1;
 		    	.skill-name {
-		    		min-width: 65px;
+		    		min-width: 95px;
+		    		color: #585858;
+		    		font-size: medium;
+		    		&.percentage-number {
+		    			min-width: unset;
+		    		}
 		    	}
 				}
 			}
@@ -59,3 +66,40 @@ mat-icon {
   color: #585858;
 }
 
+// colores progress-bar//
+.development {
+	.mat-progress-bar-fill::after {
+    background-color: #90a7b0;
+	}
+}
+
+.backend {
+	.mat-progress-bar-fill::after {
+    background-color: #00d0d9;
+	}
+}
+
+.leadership {
+	.mat-progress-bar-fill::after {
+    background-color: #ac6acf;
+	}
+}
+
+.design {
+	.mat-progress-bar-fill::after {
+    background-color: #f4e18d;
+	}
+}
+
+.software {
+	.mat-progress-bar-fill::after {
+    background-color: #c3aeaa;
+	}
+}
+// fin colores progress-bar//
+
+.height {
+	&.mat-progress-bar {
+    height: 8.5px;
+  }
+}

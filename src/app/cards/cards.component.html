@@ -1,13 +1,13 @@
 <div class="layout-container">
 	<div class="wrapper-cards">
-		<div class="card-product-main">
+		<div class="card-product-main" (click)="justClicked('profile')">
 			<img [src]="data.profilePic" alt="foto de perfil" class="img-main"/>
 			<div class="title-main">
 				<h2>{{data.name}}</h2>
 				<p>{{data.profession}}</p>
 			</div>
 		</div>
-		<div class="card-product box-dev">
+		<div class="card-product box-dev" (click)="justClicked('frontend')">
 			<div class="wrapper-img-develop">
 				<img class="img-develop" [src]="data.generalSkills.data[0][0].icon" alt="develop skill"/>
 			</div>
@@ -19,7 +19,7 @@
 				<mat-progress-bar mode="determinate" class="height development" [value]="data.generalSkills.data[0][0].value * 100"></mat-progress-bar>
 			</div>
 		</div>
-		<div class="card-product box-back">
+		<div class="card-product box-back" (click)="justClicked('backend')">
 			<div class="wrapper-img-backend">
 				<img class="img-backend" [src]="data.generalSkills.data[0][1].icon" alt="backend skill"/>
 			</div>
@@ -31,7 +31,7 @@
 				<mat-progress-bar mode="determinate" class="height backend" [value]="data.generalSkills.data[0][1].value * 100"></mat-progress-bar>
 			</div>
 		</div>
-		<div class="card-product box-leader">
+		<div class="card-product box-leader" (click)="justClicked('leadership')">
 			<div class="wrapper-img-leadership">
 				<img class="img-leadership" [src]="data.generalSkills.data[0][2].icon" alt="leadership skill"/>
 			</div>
@@ -43,7 +43,7 @@
 				<mat-progress-bar mode="determinate" class="height leadership" [value]="data.generalSkills.data[0][2].value * 100"></mat-progress-bar>
 			</div>
 		</div>
-		<div class="card-product box-design">
+		<div class="card-product box-design" (click)="justClicked('design')">
 			<div class="wrapper-img-design">
 				<img class="img-design" [src]="data.generalSkills.data[0][3].icon" alt="design skill"/>
 			</div>

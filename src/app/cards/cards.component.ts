@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input} from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -10,6 +10,7 @@ import {Router} from "@angular/router";
 export class CardsComponent implements OnInit {
 
   @Input() data: any;
+  @Output() theCardIs: EventEmitter<string> = new EventEmitter();
 
   constructor(private router: Router) { }
 
@@ -18,6 +19,10 @@ export class CardsComponent implements OnInit {
 
   redirectToFinal() {
     this.router.navigate(['/final']);
+  }
+
+  justClicked(place: string) {
+    this.theCardIs.emit(place);
   }
 
 }
