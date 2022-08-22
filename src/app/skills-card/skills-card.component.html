@@ -1,11 +1,9 @@
 <div class="layout-container">
-	<mat-card>
-		<div class="general-skills">
+	<mat-card [ngClass]="{'span-height': justGraph}">
+		<div
+			class="general-skills"
+			[ngClass]="{'whole-screen': justGraph}">
 			<h2 class="main-title">Mapa de Destrezas</h2>
-			<!-- <div>
-				<h5 class="second-title">PRIMARY TEXT</h5>
-				<span class="big-number">5.876,7</span>
-			</div> -->
   		<div>
   			<app-skills-chart
   				[mainColor]="color"
@@ -13,22 +11,12 @@
   			</app-skills-chart>
 			</div>
 		</div>
-
-		<div class="specific-skills">
+		<div
+			class="specific-skills"
+			[ngClass]="{'no-screen': justGraph}"
+			*ngIf="currentSkill.name !== 'Habilidades Generales'">
 			<h2 class="main-title">{{currentSkill.name}}</h2>
-			
-
 			<div class="main-skill-container">
-				<!-- <div class="ss-header">
-					<h5 class="second-title">Frontend development</h5>
-					<mat-icon
-						(click)="changeGraphData()"
-						aria-hidden="false"
-						aria-label="Example home icon"
-						fontIcon="zoom_in">
-						zoom_in		
-					</mat-icon>
-				</div> -->
 				<div class="bars-container">
 					<div
 						class="progress-container"
@@ -45,62 +33,6 @@
 							{{item.value | percent}}
 						</div>
 					</div>
-				<!-- 	<div class="progress-container">
-						<div class="skill-name">
-							HTML
-						</div>
-						<mat-progress-bar
-							mode="determinate" value="72">		
-						</mat-progress-bar>
-						<div>
-							72%
-						</div>
-					</div>
-					<div class="progress-container">
-						<div class="skill-name">
-							CSS
-						</div>
-						<mat-progress-bar mode="determinate" value="31"></mat-progress-bar>
-						<div>
-							31%
-						</div>
-					</div>
-					<div class="progress-container">
-						<div class="skill-name">
-							Javascript
-						</div>
-						<mat-progress-bar mode="determinate" value="45"></mat-progress-bar>
-						<div>
-							45%
-						</div>
-					</div>
-					<div class="progress-container">
-						<div class="skill-name">
-							React
-						</div>
-						<mat-progress-bar mode="determinate" value="21"></mat-progress-bar>
-						<div>
-							21%
-						</div>
-					</div>
-					<div class="progress-container">
-						<div class="skill-name">
-							Angular
-						</div>
-						<mat-progress-bar mode="determinate" value="3"></mat-progress-bar>
-						<div>
-							3%
-						</div>
-					</div>
-					<div class="progress-container">
-						<div class="skill-name">
-							Sass
-						</div>
-						<mat-progress-bar mode="determinate" value="98"></mat-progress-bar>
-						<div>
-							98%
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</div>

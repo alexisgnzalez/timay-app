@@ -59,18 +59,6 @@ export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
-    //console.log(this.data);
-    /*this.axesDomain = this.data[0].map((d: any) => d.axis);
-    this.axesLength =  this.data[0].length;
-    this.maxValue = d3.max(_.flatten(this.data).map((d: any) => d.value));
-    this.angleSlice = Math.PI * 2 / this.axesLength;
-    this.rScale = d3.scaleLinear()
-      .domain([0, this.maxValue])
-      .range([0, this.radius]);
-    this.radarLine = d3.lineRadial()
-      .curve(d3["curveCatmullRomClosed"])
-      .radius((d: any) => this.rScale(d))
-      .angle((d: any, i) => i * this.angleSlice);*/
     this.initVars();
     this.createRadarChart();
   }
@@ -101,16 +89,6 @@ export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
         .attr("fill", this.mainColor)
         .attr("stroke", this.mainColor)
         .attr("d", (d: any) => this.radarLine(d.map((v: any) => v.value)));
-
-      //console.log(this.plots.selectAll("circle"));
-
-      /*this.plots.selectAll('g')
-        .data(this.data)
-        //.join('g')
-        //  .attr("data-name", (d: any, i: any) => this.device(i));
-          .attr("fill", this.mainColor)
-          // .attr("fill-opacity", 0.3)
-          .attr("stroke", this.mainColor);*/
 
       this.plots.selectAll("circle")
         .data(this.data[0])
@@ -217,10 +195,7 @@ export class SkillsChartComponent implements OnInit, OnChanges, AfterViewInit {
       .selectAll('g')
       .data(this.data)
       .join('g')
-        .attr("data-name", (d: any, i: any) => this.device(i))
-        //.attr("fill", "#00d0d9")
-        //.attr("fill-opacity", 0.3);
-        //.attr("stroke", "#00d0d9");
+        .attr("data-name", (d: any, i: any) => this.device(i));
 
     this.plots.append('path')
       .attr("d", (d: any) => this.radarLine(d.map((v: any) => v.value)))

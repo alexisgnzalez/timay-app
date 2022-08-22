@@ -10,6 +10,7 @@ export class SkillsCardComponent implements OnInit {
   @Input() charData: any;
   @Input() currentSkill: any;
   @Input() color: string = 'steelblue';
+  justGraph: boolean = true;
   barClasses: any = {
     development: false,
     backend: false,
@@ -34,6 +35,7 @@ export class SkillsCardComponent implements OnInit {
       leadership: this.currentSkill.class === 'leadership',
       design: this.currentSkill.class === 'design'
     }
+    this.justGraph = this.currentSkill.name === 'Habilidades Generales';
   }
 
   // changeGraphData() {
