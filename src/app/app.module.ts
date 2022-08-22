@@ -23,6 +23,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { LandingComponent } from './landing/landing.component';
 import { FinalComponent } from './final/final.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { TreeComponent } from './tree/tree.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     SkillsChartComponent,
     LandingComponent,
     FinalComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    TreeComponent
   ],
   imports: [
     BrowserModule,
