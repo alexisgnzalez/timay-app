@@ -1,3 +1,10 @@
+h2, p {
+	color: #585858;
+	h2 {
+		font-weight: bold;
+	}
+}
+
 .wrapper-cards {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
