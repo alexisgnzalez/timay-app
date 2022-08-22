@@ -26,7 +26,7 @@
       <a href="/profile-page" class="profile-button"><mat-icon>account_circle</mat-icon></a>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <div class="layout-container">
+    <div [ngClass]="{'layout-container': isLayoutOn}">
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
