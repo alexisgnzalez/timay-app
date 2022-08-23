@@ -29,7 +29,7 @@ export class NavComponent implements OnInit {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.url;
-        this.isLayoutOn = this.currentUrl === '/landing' ? false : true;
+        this.isLayoutOn = (this.currentUrl === '/landing' || this.currentUrl === '/') ? false : true;
       }
     });
   }

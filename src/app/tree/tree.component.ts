@@ -15,14 +15,11 @@ export class TreeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.data);
-    //this.createTree();
-  }
+  ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges) {
     this.svg = undefined;
-    this.createTree()
+    this.createTree();
   }
 
   tree(data: any): any {

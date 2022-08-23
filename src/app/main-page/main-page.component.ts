@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import data from '../data/data1.json';
-import data2 from '../data/data2.json';
-import data3 from '../data/data3.json';
 
 @Component({
   selector: 'app-main-page',
@@ -20,11 +18,9 @@ export class MainPageComponent {
     this.currentGraphData = data.generalSkills.data;
     this.currentSkill = this.calculateGeneralSkills();
     this.color = this.getMainColor(data.generalSkills.data[0]);
-    console.log(this.currentSkill);
   }
 
   giveMeTheCard(event: string) {
-    console.log(event);
     switch (event) {
       case "profile":
         this.currentGraphData = this.calculateGeneralSkills().data;
@@ -59,9 +55,7 @@ export class MainPageComponent {
 
   getMainColor(dataSet: Array<any>): string {
     const aux = Math.max(...dataSet.map(o => o.value));
-    console.log(aux);
     const index = dataSet.map(o => o.value).indexOf(aux);
-    console.log(index);
     switch (dataSet[index].axis) {
       case "Frontend":
         this.currentSkill.class = data.frontend.class; 

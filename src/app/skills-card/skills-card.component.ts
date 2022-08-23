@@ -37,8 +37,4 @@ export class SkillsCardComponent implements OnInit {
     }
     this.justGraph = this.currentSkill.name === 'Habilidades Generales';
   }
-
-  // changeGraphData() {
-  //   console.log("locl");
-  // }
 }
