@@ -20,6 +20,7 @@ export class MainPageComponent {
     this.currentGraphData = data.generalSkills.data;
     this.currentSkill = this.calculateGeneralSkills();
     this.color = this.getMainColor(data.generalSkills.data[0]);
+    console.log(this.currentSkill);
   }
 
   giveMeTheCard(event: string) {

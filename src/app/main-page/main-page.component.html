@@ -8,6 +8,8 @@
     [charData]="currentGraphData"
     [currentSkill]="currentSkill">
   </app-skills-card>
-  <!-- <app-tree [data]="userData.tree">
-  </app-tree> -->
+  <app-tree
+    *ngIf="currentSkill.name === 'Habilidades Generales'"
+    [data]="userData.tree">
+  </app-tree>
 </div>
